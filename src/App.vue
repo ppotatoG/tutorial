@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg="vue@2"/>
+    <slick/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Slick from './components/slick.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Slick
   }
 }
 </script>
