@@ -1,16 +1,10 @@
 <template>
-    <div>
+    <div class="wrap">
         <VueSlickCarousel v-bind="settings">
-            <div><h1>1</h1></div>
-            <div><h1>2</h1></div>
-            <div><h1>3</h1></div>
-            <div><h1>4</h1></div>
-            <div><h1>5</h1></div>
-            <div><h1>6</h1></div>
-            <div><h1>7</h1></div>
-            <div><h1>8</h1></div>
-            <div><h1>9</h1></div>
-            <div><h1>10</h1></div>
+            <div v-for="i in 10" v-bind:key="i"><p>{{ i }}</p></div>
+        </VueSlickCarousel>
+        <VueSlickCarousel v-bind="settings">
+            <div v-for="i in 10" v-bind:key="i"><p>{{ i }}</p></div>
         </VueSlickCarousel>
     </div>
 </template>
@@ -26,6 +20,7 @@ export default {
     data() {
         return {
             settings: {
+                "arrows": false,
                 "dots": true,
                 "infinite": true,
                 "slidesToShow": 3,
@@ -34,7 +29,8 @@ export default {
                 "autoplaySpeed": 2000,
                 "pauseOnDotsHover": true,
                 "pauseOnFocus": true,
-                "pauseOnHover": true
+                "pauseOnHover": true,
+                "adaptiveHeight": true
             }
         }
     }
@@ -42,7 +38,27 @@ export default {
 </script>
 
 <style lang="scss">
-.slick-slide {
-    background: gray;
+.slick {
+    &-slider {
+        & + .slick-slider {
+            margin-top: 50px;
+            .slick-slide > div {
+                background: beige;
+            }
+        }
+    }
+    &-slide {
+        > div {
+            background: silver;
+            margin: 5px;
+        }
+        p {
+            text-align: center;
+            font: {
+                size: 50px;
+                weight: bold;
+            }
+        }
+    }
 }
 </style>
