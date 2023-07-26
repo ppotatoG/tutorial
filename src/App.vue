@@ -1,26 +1,26 @@
 <template>
-  <div id="app">
-    <slick/>
-  </div>
+	<div id="app">
+		<CopyExample/>
+	</div>
 </template>
 
 <script>
-import Slick from './components/slick.vue'
+import CopyExample from './components/CopyExample'
 
 export default {
-  name: 'App',
-  components: {
-    Slick
-  }
+	name: 'App',
+	components: {
+		CopyExample
+	},
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
 }
 </style>
